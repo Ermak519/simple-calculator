@@ -1,7 +1,12 @@
 ## Work description
 The function accepts arithmetic operations of two numbers as a string and returns a string with the result of their execution.
 
-- The calculator can perform operations of addition, subtraction, multiplication and division with two numbers: a + b, a - b, a * b, a / b. The data is transferred as a string.
+- The calculator can perform operations of addition, subtraction, multiplication and division with two numbers: 
+  1) a + b, 
+  2) a - b, 
+  3) a * b, 
+  4) a / b. 
+  The data is transferred as a string.
 - The calculator can work with Arabic (1,2,3,4,5 ...) and Roman (I, II, III, IV, V ...) numbers.
 - The calculator accepts numbers from 1 to 10.
 - The calculator only works with integers.
