@@ -1,4 +1,4 @@
-## Описание работы
+## Work description
 The function accepts arithmetic operations of two numbers as a string and returns a string with the result of their execution.
 
 - The calculator can perform operations of addition, subtraction, multiplication and division with two numbers: a + b, a - b, a * b, a / b. The data is transferred as a string.
