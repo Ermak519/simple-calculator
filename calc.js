@@ -100,7 +100,7 @@ function calculator(string){
     function calc(s) {
         let result = null;
         let strRome = '';
-        let type = identifyInput(s); // rome or arab
+        let type = identifyInput(s);
         if (type == 'arabic') {
             result = calculation(s);
         }
@@ -110,10 +110,9 @@ function calculator(string){
             result = toRome(result);
         }
         return result.toString();
-        // console.log(result.toString())
     }
     
     return calc(string)
 }
 
-module.exports = calculator; // Не трогайте эту строчку
+module.exports = calculator;
