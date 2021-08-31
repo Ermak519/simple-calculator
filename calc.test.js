@@ -1,67 +1,55 @@
 const calculator = require('./calc');
 
-test('должен работать с десятичными числами (сложение)', () => {
-  expect(calculator('1 + 1')).toBe('2');
-  expect(calculator('1 + 2')).toBe('3');
+test('addition', () => {
+  expect(calculator('2 + 4')).toBe('6');
   expect(calculator('4 + 3')).toBe('7');
-  expect(calculator('10 + 10')).toBe('20');
+  expect(calculator('10 + 9')).toBe('19');
 });
 
-test('должен работать с десятичными числами (вычитание)', () => {
-  expect(calculator('10 - 1')).toBe('9');
-  expect(calculator('5 - 4')).toBe('1');
-  expect(calculator('4 - 4')).toBe('0');
-  expect(calculator('1 - 10')).toBe('-9');
-  expect(calculator('4 - 5')).toBe('-1');
+test('subtraction', () => {
+  expect(calculator('8 - 1')).toBe('7');
+  expect(calculator('7 - 4')).toBe('3');
 });
 
 
-test('должен работать с десятичными числами (умножение)', () => {
-  expect(calculator('10 * 10')).toBe('100');
-  expect(calculator('4 * 10')).toBe('40');
-  expect(calculator('5 * 1')).toBe('5');
-  expect(calculator('5 * 5')).toBe('25');
+test('multiplication', () => {
+  expect(calculator('10 * 9')).toBe('90');
+  expect(calculator('3 * 7')).toBe('21');
+  expect(calculator('5 * 2')).toBe('10');
 });
 
 
-test('должен работать с десятичными числами (деление)', () => {
-  expect(calculator('10 / 1')).toBe('10');
-  expect(calculator('6 / 2')).toBe('3');
-  expect(calculator('5 / 4')).toBe('1');
-  expect(calculator('2 / 4')).toBe('0');
+test('division', () => {
+  expect(calculator('10 / 2')).toBe('5');
+  expect(calculator('4 / 3')).toBe('1');
+  expect(calculator('1 / 3')).toBe('0');
 });
 
-test('должен работать с римскими числами (сложение)', () => {
+test('addition (Rome)', () => {
   expect(calculator('I + I')).toBe('II');
   expect(calculator('I + II')).toBe('III');
-  expect(calculator('IV + III')).toBe('VII');
-  expect(calculator('X + X')).toBe('XX');
   expect(calculator('X + IX')).toBe('XIX');
 });
 
-test('должен работать с римскими числами (вычитание)', () => {
-  expect(calculator('X - I')).toBe('IX');
+test('subtraction (Rome)', () => {
   expect(calculator('V - IV')).toBe('I');
   expect(calculator('IV - IV')).toBe('');
   expect(calculator('I - X')).toBe('');
-  expect(calculator('IV - V')).toBe('');
 });
 
-test('должен работать с римскими числами (умножение)', () => {
-  expect(calculator('X * X')).toBe('C');
+test('multiplication (Rome)', () => {
   expect(calculator('IV * X')).toBe('XL');
   expect(calculator('V * I')).toBe('V');
   expect(calculator('V * V')).toBe('XXV');
 });
 
-test('должен работать с римскими числами (деление)', () => {
+test('division (Rome)', () => {
   expect(calculator('X / I')).toBe('X');
-  expect(calculator('VI / II')).toBe('III');
   expect(calculator('V / IV')).toBe('I');
   expect(calculator('II / IV')).toBe('');
 });
 
-test('должен выбрасывать ошибку на некорректных данных', () => {
+test('other errors', () => {
   expect(() => calculator('')).toThrowError();
   expect(() => calculator(' ')).toThrowError();
   expect(() => calculator('     ')).toThrowError();
