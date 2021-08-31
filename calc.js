@@ -17,13 +17,10 @@ function calculator(string){
     function calculation(s) {
         let arr = s.split(' ');
         let operators = ["+", "-", "*", "/"];
-        let a = arr[0];
-        let b = arr[2];
-        let operator = arr[1];
-        let x = parseInt(a, 10);
-        let y = parseInt(b, 10);
-        if (operators.includes(operator)) {
-            switch (operator) {
+        let x = parseInt(arr[0], 10);
+        let y = parseInt(arr[2], 10);
+        if (operators.includes(arr[1])) {
+            switch (arr[1]) {
                 case "+":
                     return x + y;
                 case "-":
